@@ -1,0 +1,91 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('RAINBOW.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+header {
+  grid-column: 1 / -1;
+  background-color: #004d40cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+footer {
+  grid-column: 1 / -1;
+  background-color: #004d40cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.sidebar {
+  background: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.sidebar button {
+  background: #fff;
+  border: 2px solid #004d40;
+  color: #004d40;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #004d40;
+  color: white;
+}
+
+.sidebar button img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+}
+
+.description {
+  background: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+.description h2 {
+  margin-top: 0;
+  color: #004d40;
+}
