@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Enoch's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/index.html" class="nav-link">Home</a>
+                <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/project.html">Projects</a>
+                <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/contact.html" class="nav-btn">Contact Me</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Contact Section -->
+        <div class="container">
+            <div class="particles"></div>
+            <h4>Contact Me</h4>
+            <form method="post" action="https://script.google.com/macros/s/AKfycbzGIEqVuDld7Ts1OA4Uu8tDBETYOyK1Srs6cvpFoNKuXKqBP8yeVpDGqyvWeWv7RPZe/exec" name="contact-form">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-message">
+            <div class="success-icon">✨</div>
+            <h3>Success!</h3>
+            <p>Your message has been sent successfully!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Contact</h3>
+                <p><i class="ri-mail-line"></i> 202412129@fit.edu.ph</p>
+                <p><i class="ri-phone-line"></i> 09684522612</p>
+                <p><i class="ri-map-pin-line"></i> Caloocan City, Philippines</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/index.html">Home</a>
+                <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/project.html">Projects</a>
+                <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2025 Enoch Paul P. Salloman. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

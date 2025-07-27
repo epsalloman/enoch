@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("sdgs.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Container using 960px grid system, centered */
+        .page-wrapper {
+            max-width: 960px;
+            margin: 40px auto;
+            background-color: rgba(0, 0, 0, 0.65);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 90vh; /* viewport height */
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+        }
+
+        header {
+            padding: 20px 30px;
+            border-bottom: 2px solid #2d7ee7;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #5db2ff;
+            text-shadow: 0 0 10px #2d7ee7;
+            user-select: none;
+        }
+
+        /* Main content area with scroll */
+        main {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            padding: 30px 40px;
+            background-color: rgba(10, 10, 10, 0.8);
+            border-radius: 0 0 12px 12px;
+            color: #cce6ff;
+        }
+
+        /* Form container */
+        .register {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(20, 20, 30, 0.9);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #2d7ee7aa;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heading {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            color: #7eb9ff;
+            text-align: center;
+            user-select: none;
+        }
+
+        label {
+            margin-bottom: 7px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            padding: 0 15px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #222;
+            background: #e6f0ff;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 8px #2d7ee7;
+            background: #f0f7ff;
+        }
+
+        #sdg {
+            max-height: 180px;
+            overflow-y: auto;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            background: #1c2c4a;
+            border-radius: 10px;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        #sdg input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        #sdg label {
+            font-size: 1rem;
+            color: #d0e2ff;
+            cursor: pointer;
+            line-height: 1.6em;
+        }
+
+        button {
+            height: 45px;
+            border-radius: 8px;
+            border: none;
+            background-color: #2d7ee7;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 0 12px #2d7ee7aa;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            user-select: none;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #1a5fcc;
+            box-shadow: 0 0 25px #1a5fcccc;
+            outline: none;
+        }
+
+        footer {
+            padding: 15px 30px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.7);
+            border-top: 2px solid #2d7ee7;
+            color: #9ab9ff;
+            font-size: 0.9rem;
+            border-radius: 0 0 12px 12px;
+            user-select: none;
+        }
+
+        .return-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+        }
+
+        .return-btn:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="register">
+        <form>
+            <h1 class="heading">Sign Up</h1>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname">
+           
+            <label for="middlename">Middle Name:</label>
+            <input type="text" id="middlename" name="middlename">
+           
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname">
+           
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+           
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" required>
+           
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="agender">Agender</option>
+                <option value="bigender">Bigender</option>
+                <option value="genderfluid">Genderfluid</option>
+                <option value="androgyne">Androgyne</option>
+                <option value="androgynous">Androgynous</option>
+                <option value="cis">Cisgender</option>
+                <option value="cis_female">Cis Female</option>
+                <option value="cis_male">Cis Male</option>
+                <option value="cis_man">Cis Man</option>
+                <option value="cis_woman">Cis Woman</option>
+                <option value="demiboy">Demiboy</option>
+                <option value="demigender">Demigender</option>
+                <option value="demigirl">Demigirl</option>
+                <option value="enby">Enby (Nonbinary)</option>
+                <option value="female_to_male">Female to Male (FTM)</option>
+                <option value="gender_nonconforming">Gender Nonconforming</option>
+                <option value="gender_questioning">Gender Questioning</option>
+                <option value="gender_variant">Gender Variant</option>
+                <option value="genderqueer">Genderqueer</option>
+                <option value="intersex">Intersex</option>
+                <option value="male_to_female">Male to Female (MTF)</option>
+                <option value="man">Man</option>
+                <option value="mtx">MTX</option>
+                <option value="neutrois">Neutrois</option>
+                <option value="nonbinary">Nonbinary</option>
+                <option value="other">Other</option>
+                <option value="pangender">Pangender</option>
+                <option value="polygender">Polygender</option>
+                <option value="trans">Transgender</option>
+                <option value="trans_female">Trans Female</option>
+                <option value="trans_male">Trans Male</option>
+                <option value="trans_man">Trans Man</option>
+                <option value="trans_woman">Trans Woman</option>
+                <option value="transfeminine">Transfeminine</option>
+                <option value="transmasculine">Transmasculine</option>
+                <option value="two_spirit">Two-Spirit</option>
+                <option value="woman">Woman</option>
+                <option value="x_gender">X-gender</option>
+                <option value="third_gender">Third Gender</option>
+                <option value="neutral">Neutral</option>
+                <option value="neogender">Neogender</option>
+                <option value="autigender">Autigender</option>
+                <option value="apogender">Apogender</option>
+                <option value="maverique">Maverique</option>
+                <option value="novigender">Novigender</option>
+                <option value="intergender">Intergender</option>
+                <option value="aliagender">Aliagender</option>
+                <option value="quoisexual">Quoisexual</option>
+                <option value="greygender">Greygender</option>
+                <option value="ceterosexual">Ceterosexual</option>
+                <option value="femme">Femme</option>
+                <option value="butch">Butch</option>
+                <option value="genderflux">Genderflux</option>
+                <option value="genderfae">Genderfae</option>
+                <option value="librafluid">Librafluid</option>
+                <option value="lunarian">Lunarian</option>
+                <option value="solaric">Solaric</option>
+                <option value="velgender">Velgender</option>
+                <option value="voidgender">Voidgender</option>
+                <option value="xenogender">Xenogender</option>
+                <option value="omni_gender">Omnigender</option>
+                <option value="abimegender">Abimegender</option>
+                <option value="aerogender">Aerogender</option>
+                <option value="ambigender">Ambigender</option>
+                <option value="colorgender">Colorgender</option>
+            </select>
+           
+            <label for="sdg">SDG(s) of Interest (Checkboxes):</label>
+            <div id="sdg">
+                <input type="checkbox" id="sdg1" name="sdg" value="no_poverty">
+                <label for="sdg1">No Poverty</label><br>
+                <input type="checkbox" id="sdg2" name="sdg" value="zero_hunger">
+                <label for="sdg2">Zero Hunger</label><br>
+                <input type="checkbox" id="sdg3" name="sdg" value="good_health">
+                <label for="sdg3">Good Health and Well-being</label><br>
+                <input type="checkbox" id="sdg4" name="sdg" value="quality_education">
+                <label for="sdg4">Quality Education</label><br>
+                <input type="checkbox" id="sdg5" name="sdg" value="gender_equality">
+                <label for="sdg5">Gender Equality</label><br>
+                <input type="checkbox" id="sdg6" name="sdg" value="clean_water">
+                <label for="sdg6">Clean Water and Sanitation</label><br>
+                <input type="checkbox" id="sdg7" name="sdg" value="affordable_energy">
+                <label for="sdg7">Affordable and Clean Energy</label><br>
+                <input type="checkbox" id="sdg8" name="sdg" value="decent_work">
+                <label for="sdg8">Decent Work and Economic Growth</label><br>
+                <input type="checkbox" id="sdg9" name="sdg" value="industry_innovation">
+                <label for="sdg9">Industry, Innovation, and Infrastructure</label><br>
+                <input type="checkbox" id="sdg10" name="sdg" value="reduced_inequality">
+                <label for="sdg10">Reduced Inequality</label><br>
+                <input type="checkbox" id="sdg11" name="sdg" value="sustainable_cities">
+                <label for="sdg11">Sustainable Cities and Communities</label><br>
+                <input type="checkbox" id="sdg12" name="sdg" value="responsible_consumption">
+                <label for="sdg12">Responsible Consumption and Production</label><br>
+                <input type="checkbox" id="sdg13" name="sdg" value="climate_action">
+                <label for="sdg13">Climate Action</label><br>
+                <input type="checkbox" id="sdg14" name="sdg" value="life_below_water">
+                <label for="sdg14">Life Below Water</label><br>
+                <input type="checkbox" id="sdg15" name="sdg" value="life_on_land">
+                <label for="sdg15">Life on Land</label><br>
+                <input type="checkbox" id="sdg16" name="sdg" value="peace_justice">
+                <label for="sdg16">Peace and Justice Strong Institutions</label><br>
+                <input type="checkbox" id="sdg17" name="sdg" value="partnerships">
+                <label for="sdg17">Partnerships for the Goals</label><br>
+            </div>
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <a href="file:///C:/Users/acer/OneDrive%20-%20feutech.edu.ph/PROJECT/Project.html" class="return-btn">← Project</a>
+</body>
+</html>
